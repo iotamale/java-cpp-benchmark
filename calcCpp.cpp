@@ -10,9 +10,9 @@ int main(int argc, char* argv[]) {
         n = stoi(argv[1]);
     }
 
-    vector<long long> A(n*n);
-    vector<long long> B(n*n);
-    vector<long long> C(n*n, 0);
+    vector<long long> A(n * n);
+    vector<long long> B(n * n);
+    vector<long long> C(n * n, 0);
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
