@@ -31,7 +31,7 @@ public class CalcJava {
         final long end = System.nanoTime();
         final long durationMs = (end-start) / 1000000;
 
-        System.out.println("java: " + durationMs + "ms");
+        System.out.println(durationMs + "ms");
         System.out.println(C[0][0]);
     }
 

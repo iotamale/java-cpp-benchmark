@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
     auto end = chrono::high_resolution_clock::now();
     auto durationMs = chrono::duration_cast<chrono::milliseconds>(end - start).count();
 
-    cout << "cpp: " << durationMs << "ms\n";
+    cout << durationMs << "ms\n";
     cout << C[0][0] << '\n';
 
     return 0;
