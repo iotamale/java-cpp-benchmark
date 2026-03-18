@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Compiling..."
-g++-15 -o calcCpp calcCpp.cpp -Wl,-ld_classic -O3
+c++ -std=c++17 -O3 -o calcCpp calcCpp.cpp
 javac CalcJava.java
 
 echo "Compilation complete."
