@@ -10,9 +10,9 @@ int main(int argc, char* argv[]) {
         n = stoi(argv[1]);
     }
 
-    vector<vector<double> > A(n, vector<double>(n));
-    vector<vector<double> > B(n, vector<double>(n));
-    vector<vector<double> > C(n, vector<double>(n));
+    vector<vector<long long> > A(n, vector<long long>(n));
+    vector<vector<long long> > B(n, vector<long long>(n));
+    vector<vector<long long> > C(n, vector<long long>(n));
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -34,7 +34,7 @@ int main(int argc, char* argv[]) {
     auto durationMs = chrono::duration_cast<chrono::milliseconds>(end - start).count();
 
     cout << "cpp: " << durationMs << "ms\n";
-    cout << (long long)(C[0][0]) << '\n';
+    cout << C[0][0] << '\n';
 
     return 0;
 }
