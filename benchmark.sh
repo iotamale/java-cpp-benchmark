@@ -1,4 +1,10 @@
 #!/bin/bash
+
+SKIP_XINT="false"
+if [ "$1" == "--skip-xint" ]; then
+    SKIP_XINT="true"
+fi
+
 echo "Compiling..."
 c++ -std=c++17 -O3 -o calcCpp calcCpp.cpp
 javac CalcJava.java
@@ -18,8 +24,10 @@ for N in 500 1000; do
     echo -n "Java (-Xcomp): "
     java -Xcomp -Xdiag CalcJava $N | grep ms
 
-    echo -n "Java (-Xint): "
-    java -Xint -Xdiag CalcJava $N | grep ms
+    if [ "$SKIP_XINT" = "false" ]; then
+        echo -n "Java (-Xint): "
+        java -Xint -Xdiag CalcJava $N | grep ms
+    fi 
 
     echo "----------------------------------"
 done
